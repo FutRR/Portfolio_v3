@@ -18,8 +18,12 @@
 
 body{
     background-color: black;
+    color: #fff;
     font-family: 'RenoMono';
+    z-index: 1;
 }
+
+/* NAVIGATION BAR */
 
 nav{
     position: absolute;
@@ -33,13 +37,21 @@ nav{
     height: 70px;
 }
 
+.nav-links{
+    position: fixed;
+    z-index: 2;
+    top: 25px;
+    right: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
 .nav-links ul{
     display: flex;
     list-style-type: none;
 }
 
 .nav-links ul li{
-    margin: 0 25px;
+    margin: 10px 25px;
 }
 
 .nav-links ul a{
@@ -82,12 +94,54 @@ nav{
 }
 
 
+/* MAIN */
 
+.infos{
+    height: 30vh;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.skills h2{
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+    text-underline-offset: 5px;
+}
+
+.front{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.front i{
+    font-size: 50px;
+}
+
+.back{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.back i{
+    font-size: 50px;
+}
 
 @media screen and (max-width: 900px){
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     #logo{
@@ -95,24 +149,21 @@ nav{
     }
 
     .menuburger{
+        position: fixed;
+        right: 10px;
         display: block;
         z-index: 99;
         margin: 10px;
     }
 
     .nav-links{
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0);
-        backdrop-filter: blur(7px);
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 20);
+        top: 25px;
+        right: 70px;
         margin-right: -100%;
-        transition: 400ms;
+        transition: 500ms;
     }
 
     .mobile-menu{
@@ -122,13 +173,12 @@ nav{
 
     .nav-links ul{
         display: flex;
-        flex-direction: column;
         align-items: center;
 
     }
 
     .nav-links ul li{
-        margin: 20px 0;
+        margin: 10px;
     }
 
 }
