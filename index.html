@@ -18,7 +18,7 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
-            <div class="menuburger" onclick="myFunction(this)">
+            <div class="menuburger" onclick="menuChange(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -31,7 +31,7 @@
                 <p>Web Developper</p>
             </div>
 
-            <div class="skills">
+            <div id="skills">
                 <h2>Skills</h2>
                 <div class="front">
                     <h3>Front-End</h3>
@@ -44,8 +44,12 @@
                     <i class="fa-brands fa-php"></i>
 
                 </div>
-
             </div>
+
+            <div class="links">
+                <a href="/pdf/CV.pdf" target="_blank" class="download" download="">Download CV</a>
+                <a href="mailto:futterermaxime@gmail.com" target="_blank"  class="contact">Contact Me</a>
+                </div>
 
         </main>
 
@@ -53,7 +57,7 @@
 
 
     <script>
-        function myFunction(x) {
+        function menuChange(x) {
             x.classList.toggle("change");
         }
 
